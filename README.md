@@ -17,7 +17,7 @@ Tensorflow implementation for ECG sleep apnea detection
 - .qrs files: machine generated binary annotation files, made using [sqrs125](https://physionet.org/physiotools/wag/sqrs-1.htm)
 
 ```bash
-wget -r -np http://www.physionet.org/physiobank/database/apnea-ecg/
+wget -r -N -c -np -nv https://physionet.org/files/apnea-ecg/1.0.0/
 ```
 
 ## Getting Started
@@ -26,6 +26,14 @@ wget -r -np http://www.physionet.org/physiobank/database/apnea-ecg/
 - RR Interval: extracting the time intervals between consecutive heart beats
 - QRS Amplitude: calculates the amplitude of R-peak
 - [Age and Sex](https://physionet.org/physiobank/database/apnea-ecg/additional-information.txt)
+
+```python
+import collections
+if not hasattr(collections, 'MutableMapping'):
+    from collections.abc import MutableMapping
+    collections.MutableMapping = MutableMapping
+```
+
 ```bash
 python pre_proc.py
 ```

@@ -1,0 +1,8 @@
+matplotlib~=3.9.3
+scikit-learn~=1.5.0
+scipy~=1.14.1
+tqdm~=4.66.3
+tensorflow~=2.18.0
+wfdb~=4.1.2
+hrv~=0.2.10
+numpy~=2.0.2
